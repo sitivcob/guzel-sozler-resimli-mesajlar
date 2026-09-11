@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Güzel Sözler & Resimli Mesajlar | Tebrik Kartı Tasarla</title>
-    <meta name="description" content="Türkiye'nin en geniş ve şık resimli mesajlar arşivi. Kendi tebrik kartınızı tasarlayın, WhatsApp ve Instagram'da ücretsiz paylaşın. Binlerce güncel içerik.">
+    <meta name="description" content="Türkiye'nin en geniş ve şık resimli mesajlar arşivi. Kendi tebrik kartınızı tasarlayın, WhatsApp ve Instagram'da ücretsiz paylaşın.">
     
-    <!-- WhatsApp, Facebook, Telegram vb. Sosyal Medya Paylaşım Önizlemeleri (Open Graph) -->
+    <!-- Sosyal Medya Önizlemeleri (Open Graph) -->
     <meta property="og:title" content="Güzel Sözler & Resimli Mesajlar | Tebrik Kartı Tasarla" />
-    <meta property="og:description" content="Kendi tebrik kartınızı tasarlayın, WhatsApp ve Instagram'da sevdiklerinizle ücretsiz paylaşın. Binlerce mesaj ve söz!" />
+    <meta property="og:description" content="Kendi tebrik kartınızı tasarlayın, sevdiklerinizi mutlu edin." />
     <meta property="og:image" content="https://sitivcob.github.io/guzel-sozler-resimli-mesajlar/assets/images/gsm_logo.png" />
     <meta property="og:url" content="https://sitivcob.github.io/guzel-sozler-resimli-mesajlar/" />
     <meta property="og:type" content="website" />
@@ -17,12 +17,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Siyah & Altın Premium Tema Ayarları -->
+    <!-- Premium Dark & Gold Tema -->
     <script>
         tailwind.config = {
             theme: {
@@ -32,19 +32,20 @@
                         serif: ['Playfair Display', 'serif'] 
                     },
                     colors: { 
-                        darkBg: '#080808',     
-                        cardBg: '#111111',     
+                        darkBg: '#050505',     
+                        cardBg: '#0f0f11',     
                         gold: '#FFD700',       
                         darkGold: '#B8860B',   
                         lightGold: '#FFF8DC'   
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite', 
+                        'float-slow': 'float 8s ease-in-out infinite', 
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-15px)' },
+                            '50%': { transform: 'translateY(-20px)' },
                         }
                     }
                 }
@@ -53,44 +54,68 @@
     </script>
 
     <style>
+        body { background-color: #050505; }
         .glass-nav { 
-            background: rgba(8, 8, 8, 0.85); 
-            backdrop-filter: blur(20px); 
-            border-bottom: 1px solid rgba(255, 215, 0, 0.15); 
+            background: rgba(5, 5, 5, 0.75); 
+            backdrop-filter: blur(24px); 
+            -webkit-backdrop-filter: blur(24px); 
+            border-bottom: 1px solid rgba(255, 215, 0, 0.08); 
+        }
+        .feature-card {
+            background: rgba(15, 15, 17, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .feature-card:hover {
+            border-color: rgba(255, 215, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.05);
+            background: rgba(20, 20, 22, 0.8);
         }
         .hide-scroll::-webkit-scrollbar { display: none; }
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
-        /* Logo Yuvarlatma - Siyah kareleri yok eder */
         .rounded-logo { border-radius: 50%; object-fit: cover; }
     </style>
 </head>
-<body class="bg-darkBg text-gray-300 font-sans antialiased selection:bg-gold selection:text-black relative overflow-x-hidden">
+<body class="text-gray-300 font-sans antialiased selection:bg-gold selection:text-black relative overflow-x-hidden">
 
-    <!-- Mistik Ortam Işıkları (Altın Parıltısı) -->
-    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/10 blur-[150px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-darkGold/10 blur-[150px] pointer-events-none -z-10"></div>
+    <!-- Ortam Işıkları -->
+    <div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/5 blur-[120px] pointer-events-none -z-10 animate-float-slow"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-darkGold/10 blur-[150px] pointer-events-none -z-10"></div>
 
     <!-- NAVBAR -->
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 
-                <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
-                    <img src="assets/images/gsm_logo.png" alt="Uygulama Logosu" class="h-12 lg:h-14 w-auto object-contain rounded-logo shadow-[0_0_15px_rgba(255,215,0,0.4)] border border-gold/30">
+                <!-- Logo -->
+                <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="assets/images/gsm_logo.png" alt="Güzel Sözler Logo" class="h-14 w-14 rounded-logo shadow-[0_0_15px_rgba(255,215,0,0.3)] border-2 border-gold/30">
                     <div class="hidden sm:flex flex-col">
-                        <span class="font-serif font-bold text-xl tracking-wide text-white leading-tight">Güzel Sözler</span>
-                        <span class="text-gold text-sm font-medium tracking-widest uppercase">Ve Mesajlar</span>
+                        <span class="font-serif font-bold text-2xl tracking-wide text-white leading-tight">Güzel Sözler</span>
+                        <span class="text-gold text-xs font-medium tracking-widest uppercase">Ve Mesajlar</span>
                     </div>
                 </div>
                 
+                <!-- Menü Linkleri -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#ozellikler" class="text-gray-300 hover:text-lightGold transition font-medium">Özellikler</a>
-                    <a href="#kategoriler" class="text-gray-300 hover:text-lightGold transition font-medium">Kategoriler</a>
-                    <a href="#galeri" class="text-gray-300 hover:text-lightGold transition font-medium">Ekranlar</a>
+                    <a href="#ozellikler" class="text-gray-400 hover:text-gold transition font-medium">Özellikler</a>
+                    <a href="#kategoriler" class="text-gray-400 hover:text-gold transition font-medium">Kategoriler</a>
+                    <a href="#galeri" class="text-gray-400 hover:text-gold transition font-medium">Ekranlar</a>
                 </div>
 
-                <div class="flex items-center gap-3">
-                    <button id="mobile-menu-button" class="md:hidden text-gold hover:text-lightGold focus:outline-none text-2xl">
+                <!-- Google Play Hızlı İndir Butonu (YTD Stili) -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://play.google.com/store/apps/details?id=com.sitiv.ozelgunler" target="_blank" class="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-gold hover:text-black hover:border-gold transition-all duration-300 shadow-lg">
+                        <i class="fa-brands fa-google-play text-lg"></i>
+                        <span>İndir</span>
+                    </a>
+                </div>
+
+                <!-- Mobil Menü Butonu -->
+                <div class="flex items-center gap-3 md:hidden">
+                    <button id="mobile-menu-button" class="text-gold hover:text-white focus:outline-none text-2xl">
                         <i class="fa-solid fa-bars-staggered"></i>
                     </button>
                 </div>
@@ -98,11 +123,14 @@
         </div>
 
         <!-- Mobil Menü -->
-        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-gold/20 absolute w-full left-0 top-24 transition-all shadow-[0_30px_60px_rgba(0,0,0,0.8)] z-50">
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0c] border-b border-white/5 absolute w-full left-0 top-24 transition-all shadow-2xl z-50">
             <div class="px-4 pt-4 pb-8 flex flex-col space-y-4 text-center">
                 <a href="#ozellikler" class="text-gray-300 hover:text-gold font-medium text-lg">Özellikler</a>
                 <a href="#kategoriler" class="text-gray-300 hover:text-gold font-medium text-lg">Kategoriler</a>
                 <a href="#galeri" class="text-gray-300 hover:text-gold font-medium text-lg">Ekranlar</a>
+                <a href="https://play.google.com/store/apps/details?id=com.sitiv.ozelgunler" target="_blank" class="mt-4 flex items-center justify-center gap-2 text-black bg-gold py-3 rounded-xl font-bold text-lg">
+                    <i class="fa-brands fa-google-play"></i> Uygulamayı İndir
+                </a>
             </div>
         </div>
     </nav>
@@ -112,152 +140,159 @@
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             
             <div class="flex-1 text-center lg:text-left z-10">
-                <div class="inline-flex items-center px-4 py-2 rounded-full border border-gold/40 bg-gold/10 text-lightGold text-sm font-semibold mb-8 shadow-[0_0_15px_rgba(255,215,0,0.15)]">
-                    <i class="fa-solid fa-pen-nib text-gold mr-2"></i>
-                    Kendi Kartını Tasarla, Anında Paylaş
+                <!-- 5 Yıldız Güven Bölümü -->
+                <div class="flex items-center justify-center lg:justify-start gap-1 text-gold mb-6 text-sm sm:text-base">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-gray-400 ml-2 font-medium">5.0 Mükemmel Puan</span>
                 </div>
                 
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight mb-6 leading-tight text-white">
+                <h1 class="text-5xl sm:text-6xl lg:text-[5rem] font-serif font-bold tracking-tight mb-6 leading-[1.1] text-white">
                     Sözlerinizi <br>
                     <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">Sanata Dönüştürün.</span>
                 </h1>
                 
                 <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-                    Sadece yazıyla yetinmeyin! Uygulamamız içindeki yüzlerce hazır şablonu kullanın veya 
-                    <strong class="text-white font-medium">kendi resimli mesajınızı</strong> saniyeler içinde baştan yaratın.
+                    Sıradan mesajların ötesine geçin. İçinizdeki duyguları yüzlerce premium arka plan ve profesyonel yazı araçlarıyla harmanlayıp, saniyeler içinde kendi başyapıtınızı oluşturun.
                 </p>
                 
                 <div class="flex flex-col items-center lg:items-start gap-6">
                     <div class="flex flex-col sm:flex-row items-center gap-5">
-                        <a href="https://play.google.com/store/apps/details?id=com.sitiv.ozelgunler" target="_blank" rel="noopener noreferrer" class="inline-block transform hover:-translate-y-1 transition duration-300 hover:drop-shadow-[0_0_20px_rgba(255,215,0,0.4)]">
-                            <img src="assets/images/Google_Play.png" alt="Google Play'den İndir" class="h-16 lg:h-20 w-auto object-contain">
+                        <a href="https://play.google.com/store/apps/details?id=com.sitiv.ozelgunler" target="_blank" class="inline-block transform hover:-translate-y-1 transition duration-300 hover:drop-shadow-[0_0_20px_rgba(255,215,0,0.3)]">
+                            <img src="assets/images/Google_Play.png" alt="Google Play'den İndir" class="h-16 lg:h-[72px] w-auto object-contain">
                         </a>
-                        <a href="#ozellikler" class="px-8 py-4 rounded-xl font-bold text-lg text-black bg-gradient-to-r from-gold to-yellow-400 hover:from-yellow-400 hover:to-gold transition-all shadow-[0_0_15px_rgba(255,215,0,0.4)]">
-                            Özellikleri Keşfet
+                        <a href="#galeri" class="px-8 py-[18px] rounded-xl font-bold text-lg text-white border border-white/20 bg-white/5 hover:bg-gold hover:text-black hover:border-gold transition-all duration-300">
+                            Ekranlara Göz At
                         </a>
                     </div>
                 </div>
             </div>
             
-            <!-- 🔥 İŞTE BURASI: HİÇBİR CSS ÇERÇEVESİ YOK, SADECE SENİN GÖRSELİN VE GÖLGE -->
+            <!-- Havada Süzülen Temiz Telefon -->
             <div class="flex-1 relative w-full max-w-[18rem] sm:max-w-[22rem] lg:max-w-[26rem] mx-auto flex items-center justify-center animate-float z-20 mt-10 lg:mt-0">
-                <div class="absolute inset-0 bg-gold/20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
-                <!-- Sadece img etiketi ve zarif bir drop-shadow. Yuvarlatma veya çerçeve yok! -->
-                <img src="assets/images/gsm01.png" alt="Tasarım Ekranı" class="relative z-10 w-full h-auto drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)]">
+                <div class="absolute inset-0 bg-gold/15 blur-[90px] rounded-full z-0 pointer-events-none"></div>
+                <img src="assets/images/gsm01.png" alt="Tasarım Ekranı" class="relative z-10 w-full h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)]">
             </div>
 
         </div>
     </section>
 
-    <!-- ÖZELLİKLER BÖLÜMÜ -->
-    <section id="ozellikler" class="py-24 border-b border-white/5 bg-cardBg">
+    <!-- ÖZELLİKLER BÖLÜMÜ (Yeni Modern Yapı - 8 Özellik) -->
+    <section id="ozellikler" class="py-24 border-b border-white/5 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <!-- 🔥 GARİP DURAN BAŞLIK DEĞİŞTİRİLDİ -->
-                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-4 tracking-tight text-white">Öne Çıkan Harika Özellikler</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Sevdiklerinize göndereceğiniz mesajlar artık sıradan olmayacak. Duygularınızı yansıtacak profesyonel araçlarla tanışın.</p>
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-4 tracking-tight text-white">Öne Çıkan Özellikler</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Sadece bir mesaj uygulaması değil, profesyonel bir tasarım stüdyosu.</p>
             </div>
             
-            <!-- CKB Tarzı 3'lü Düzen (Ama Altın-Siyah Temalı) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-darkBg p-8 rounded-[2rem] border border-white/10 hover:border-gold/50 transition-all duration-500 group shadow-lg">
-                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-palette"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Kendi Kartını Tasarla</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Seçtiğiniz yazılı mesaja en uygun arka planı ekleyerek kendi özel resimli tebrik kartınızı oluşturun. Zengin yazı fontları ve rengiyle tamamen kişiselleştirin.
-                    </p>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Pro Tasarım Aracı</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Arka plan, renk, font ve gölge ayarlarıyla sözlerinizi bir sanat eserine çevirin.</p>
                 </div>
                 
-                <div class="bg-darkBg p-8 rounded-[2rem] border border-white/10 hover:border-gold/50 transition-all duration-500 group shadow-lg">
-                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.15)]">
-                        <i class="fa-solid fa-images"></i>
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-regular fa-images"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Zengin Resim Galerisi</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Yüzlerce yüksek çözünürlüklü, özenle tasarlanmış hazır resimli Cuma, Kandil, Günaydın ve İyi Geceler mesajları parmaklarınızın ucunda.
-                    </p>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Zengin Galeri</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Her duyguya ve özel güne uygun, yüksek çözünürlüklü devasa arka plan arşivi.</p>
                 </div>
 
-                <div class="bg-darkBg p-8 rounded-[2rem] border border-white/10 hover:border-gold/50 transition-all duration-500 group shadow-lg">
-                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.15)]">
-                        <i class="fa-brands fa-whatsapp"></i>
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-pen-nib"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Tek Tuşla Hikaye & Durum</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Beğendiğiniz resimli mesajları doğrudan telefonunuza indirin veya kalite kaybı yaşamadan WhatsApp durum ya da Instagram hikayenizde iletin.
-                    </p>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Kendi İmzanı Ekle</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Tasarladığınız kartların köşesine adınızı ekleyerek, paylaşımınızı kişiselleştirin.</p>
                 </div>
 
-                <div class="bg-darkBg p-8 rounded-[2rem] border border-white/10 hover:border-gold/50 transition-all duration-500 group shadow-lg">
-                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-moon"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Premium Dark Mode</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Göz yormayan, pil dostu karanlık temamız sayesinde mesajlarınızı okurken ve tasarlarken inanılmaz bir konfor yaşayın.
-                    </p>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Premium Dark Mode</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Göz yormayan, pil dostu karanlık temamızla geceleri bile kusursuz bir deneyim.</p>
                 </div>
 
-                <div class="bg-darkBg p-8 rounded-[2rem] border border-white/10 hover:border-gold/50 transition-all duration-500 group shadow-lg">
-                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.15)]">
-                        <i class="fa-regular fa-calendar-check"></i>
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Önemli Günler Takvimi</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Yaklaşan tüm dini günleri, kandilleri ve bayramları tek bir ekrandan kolayca takip edin. Hiçbir özel günü kaçırmayın.
-                    </p>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Durum & Hikaye</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Hazırladığınız görseli kalite kaybı yaşamadan tek tıkla WhatsApp veya Instagram'da paylaşın.</p>
                 </div>
 
-                <div class="bg-darkBg p-8 rounded-[2rem] border border-white/10 hover:border-gold/50 transition-all duration-500 group shadow-lg">
-                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-gold text-3xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.15)]">
-                        <i class="fa-solid fa-pen-fancy"></i>
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-calendar-check"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-3 text-white">Kendi İmzanı Ekle</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Tasarımını yaptığınız mesaj kartlarının alt köşesine isminizi veya özel notunuzu ekleyerek sevdiklerinize kendinizi özel hissettirin.
-                    </p>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Önemli Günler Takvimi</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Tüm dini günleri, kandilleri ve milli bayramları tek ekrandan kolayca takip edin.</p>
                 </div>
+
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-font"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Tipografi Kontrolü</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Onlarca farklı yazı tipi, satır aralığı ve kalınlık ayarı ile metinleri tam istediğiniz gibi oturtun.</p>
+                </div>
+
+                <div class="feature-card p-6 rounded-3xl group">
+                    <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-2 text-white">Kategorize Arşiv</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Binlerce hazır sözü Cuma, Kandil, Aşk, Günaydın gibi kategorilerde anında bulun.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- KATEGORİLER BÖLÜMÜ -->
-    <section id="kategoriler" class="py-24 border-b border-white/5 bg-darkBg">
+    <!-- KAPSAMLI İÇERİK -->
+    <section id="kategoriler" class="py-24 border-b border-white/5 bg-[#080808]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
             <div class="flex-1">
-                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-8 tracking-tight text-white">Kapsamlı İçerik ve Dini Günler</h2>
-                <div class="space-y-6">
-                    <div class="bg-cardBg p-6 rounded-2xl border border-white/10 hover:border-gold/50 transition-all flex items-start group">
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-8 tracking-tight text-white">Her Ana Özel <br>Zengin Kategori Ağı</h2>
+                <div class="space-y-4">
+                    <div class="p-6 rounded-2xl border border-white/5 hover:bg-white/5 transition-all flex items-start group cursor-default">
                         <div class="mt-1 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl shrink-0 group-hover:bg-gold group-hover:text-black transition-colors"><i class="fa-solid fa-mosque"></i></div>
                         <div class="ml-5">
-                            <h4 class="font-serif font-bold text-xl text-white">Cuma ve Kandil Mesajları</h4>
-                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Ayetli, dualı, hadisli en yeni Cuma mesajları. Mevlid, Regaip, Miraç ve Berat Kandili için özel tasarlanmış huzur dolu tebrik kartları.</p>
+                            <h4 class="font-serif font-bold text-xl text-white">Cuma ve Kandiller</h4>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Ayetli, dualı, hadisli en yeni Cuma mesajları ile Mevlid, Regaip, Miraç ve Berat Kandili tebrikleri.</p>
                         </div>
                     </div>
                     
-                    <div class="bg-cardBg p-6 rounded-2xl border border-white/10 hover:border-gold/50 transition-all flex items-start group">
+                    <div class="p-6 rounded-2xl border border-white/5 hover:bg-white/5 transition-all flex items-start group cursor-default">
                         <div class="mt-1 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl shrink-0 group-hover:bg-gold group-hover:text-black transition-colors"><i class="fa-solid fa-moon"></i></div>
                         <div class="ml-5">
-                            <h4 class="font-serif font-bold text-xl text-white">Günlük & Dini Bayramlar</h4>
-                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Günaydın, İyi geceler gibi günlük mesajların yanı sıra Ramazan ve Kurban Bayramı coşkusunu paylaşacağınız binlerce hazır görsel.</p>
+                            <h4 class="font-serif font-bold text-xl text-white">Dini Bayramlar & Günlük</h4>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Ramazan ve Kurban Bayramı coşkusunun yanı sıra Günaydın, İyi geceler gibi günlük samimi mesajlar.</p>
                         </div>
                     </div>
                     
-                    <div class="bg-cardBg p-6 rounded-2xl border border-white/10 hover:border-gold/50 transition-all flex items-start group">
+                    <div class="p-6 rounded-2xl border border-white/5 hover:bg-white/5 transition-all flex items-start group cursor-default">
                         <div class="mt-1 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold text-xl shrink-0 group-hover:bg-gold group-hover:text-black transition-colors"><i class="fa-solid fa-star-and-crescent"></i></div>
                         <div class="ml-5">
                             <h4 class="font-serif font-bold text-xl text-white">Milli Bayramlar & Özel Günler</h4>
-                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Anneler günü, evlilik yıldönümleri ve 29 Ekim, 30 Ağustos gibi milli değerlerimiz için her an yanınızda olan hazır mesaj arşivi.</p>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Anneler günü, sevgililer günü ile 29 Ekim, 30 Ağustos gibi milli değerlerimiz için hazır mesaj arşivi.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="flex-1 w-full bg-gradient-to-br from-[#1a1a1a] to-black rounded-[2.5rem] p-10 border border-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative overflow-hidden flex flex-col justify-center">
-                <div class="absolute top-0 right-0 w-40 h-40 bg-gold/20 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+            <!-- Sağdaki Alıntı Kartı (YTD Tarzı Renkler) -->
+            <div class="flex-1 w-full bg-gradient-to-br from-[#121214] to-black rounded-[2rem] p-10 border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-center">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gold/20 rounded-full blur-[80px]"></div>
                 
                 <i class="fa-solid fa-quote-left text-5xl text-gold/30 mb-6 relative z-10"></i>
                 <p class="font-serif text-2xl lg:text-3xl text-white leading-relaxed mb-8 relative z-10 italic">
@@ -271,82 +306,81 @@
         </div>
     </section>
 
-    <!-- GALERİ BÖLÜMÜ (SIFIR CSS ÇERÇEVESİ, TAMAMEN TEMİZ GÖRSELLER) -->
-    <section id="galeri" class="py-24 border-t border-white/5 bg-cardBg">
+    <!-- GALERİ BÖLÜMÜ (SIFIR ÇERÇEVE, SAF TELEFON GÖRÜNÜMÜ) -->
+    <section id="galeri" class="py-24 border-t border-white/5 bg-[#0a0a0c]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-4 tracking-tight text-white">Uygulama İçi Görünümler</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Sade, asil ve kullanıcı dostu arayüzü ile aradığınızı anında bulun.</p>
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold mb-4 tracking-tight text-white">Tüm Cihazlarda Kusursuz Arayüz</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Asil, şık ve kullanımı inanılmaz kolay.</p>
             </div>
 
-            <!-- Yatay Kaydırılabilir ve CSS Müdahalesi Olmayan Galeri -->
-            <div class="flex overflow-x-auto gap-4 pb-10 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible">
+            <div class="flex overflow-x-auto gap-6 pb-10 pt-4 hide-scroll snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-10 lg:overflow-visible">
                 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm01.png" alt="Tasarım Aracı" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Görsel Tasarım Aracı</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm01.png" alt="Tasarım Aracı" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">Tasarım Stüdyosu</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm02.png" alt="Yazı Ayarları" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Detaylı Yazı Ayarları</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm02.png" alt="Yazı Ayarları" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">Gelişmiş Ayarlar</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm03.png" alt="Arka Planlar" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Yüzlerce Arka Plan</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm03.png" alt="Arka Planlar" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">Yüzlerce Arka Plan</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm04.png" alt="Menü" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Geniş Menü</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm04.png" alt="Menü" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">Geniş Menü Ağı</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm05.png" alt="Mesaj Listesi" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Hızlı Paylaşım</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm05.png" alt="Mesaj Listesi" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">Hızlı Paylaşım</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm06.png" alt="Günlük Mesajlar" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Günlük Paylaşımlar</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm06.png" alt="Günlük Mesajlar" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">Günlük Mesajlar</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm07.png" alt="Özel Günler" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Özel Günler</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm07.png" alt="Özel Günler" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">En Özel Anlar</h4>
                 </div>
 
-                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer p-2">
-                    <img src="assets/images/gsm08.png" alt="Milli Bayramlar" class="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.4)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-500">
-                    <h4 class="mt-6 font-serif font-bold text-lightGold text-lg group-hover:text-gold transition-colors">Milli Bayramlar</h4>
+                <div class="shrink-0 w-64 lg:w-full snap-center flex flex-col items-center group cursor-pointer">
+                    <img src="assets/images/gsm08.png" alt="Milli Bayramlar" class="w-full h-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_20px_40px_rgba(255,215,0,0.3)] group-hover:-translate-y-4 transition-all duration-500">
+                    <h4 class="mt-8 font-serif font-bold text-gray-300 text-lg group-hover:text-gold transition-colors">Milli Bayramlarımız</h4>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-[#050505] py-16 border-t border-gold/20 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gold/5 blur-[100px] z-0"></div>
+    <!-- FOOTER & CALL TO ACTION -->
+    <footer class="bg-[#030303] py-20 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gold/5 blur-[120px] z-0"></div>
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl font-serif font-bold mb-4 text-white">Hemen İndirin, Sevginizi Paylaşın!</h2>
-            <p class="text-gray-400 mb-8 leading-relaxed text-base font-light">
-                Güzel Sözler & Resimli Mesaj uygulaması tamamen ücretsizdir. Kendi kartınızı oluşturun, duygularınızı en asil şekilde ifade edin.
+            <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4 text-white">Güzel Sözler'i Hemen İndirin!</h2>
+            <p class="text-gray-400 mb-10 leading-relaxed text-base font-light max-w-xl mx-auto">
+                Tasarım yeteneklerinizi sergileyin, duygularınızı en şık tebrik kartlarıyla sevdiklerinize iletin. Tamamen ücretsiz.
             </p>
             
-            <a href="https://play.google.com/store/apps/details?id=com.sitiv.ozelgunler" target="_blank" class="inline-block transform hover:-translate-y-1 transition duration-300 hover:drop-shadow-[0_0_25px_rgba(255,215,0,0.4)] mb-10">
+            <a href="https://play.google.com/store/apps/details?id=com.sitiv.ozelgunler" target="_blank" class="inline-block transform hover:-translate-y-2 transition duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,0.4)] mb-12">
                 <img src="assets/images/Google_Play.png" alt="Google Play'den İndirin" class="h-16 lg:h-20 w-auto object-contain">
             </a>
 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-sm text-gray-500 border-t border-white/10 pt-8">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-sm text-gray-600 border-t border-white/10 pt-8">
                 <a href="#" class="hover:text-gold transition font-medium">Gizlilik Politikası (Privacy Policy)</a>
                 <span>&copy; 2026 Güzel Sözler & Mesajlar. Tüm Hakları Saklıdır.</span>
             </div>
         </div>
     </footer>
 
-    <!-- Mobil Menü Javascript -->
+    <!-- Mobil Menü JS -->
     <script>
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
